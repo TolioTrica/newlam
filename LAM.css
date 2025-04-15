@@ -1,0 +1,632 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cores da marca */
+:root {
+    --primary-blue: #003366;    /* Azul escuro */
+    --primary-red: #990000;     /* Vermelho escuro */
+    --secondary-blue: #004080;
+    --light-blue: #e6f0fa;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #dddddd;
+    --dark-gray: #555555;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.top-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-links a {
+    color: var(--white);
+    transition: opacity 0.3s;
+}
+
+.top-links a:hover {
+    opacity: 0.8;
+}
+
+.top-links i {
+    margin-right: 5px;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: auto;
+    max-height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+.nav-links a.active {
+    color: var(--primary-red);
+}
+
+.nav-links a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+.nav-links i {
+    margin-right: 8px;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 24px;
+    color: var(--primary-blue);
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                url('airplane-banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Flight Search */
+.flight-search {
+    background-color: var(--white);
+    padding: 40px 0;
+    margin-top: -50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.search-tabs button {
+    padding: 10px 25px;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.search-tabs button.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.search-tabs button:hover:not(.active) {
+    background-color: var(--medium-gray);
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.form-group label i {
+    margin-right: 8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.search-btn {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 14px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #800000;
+}
+
+.search-btn i {
+    margin-left: 8px;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 60px 0;
+    background-color: var(--light-blue);
+}
+
+.highlights h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+    font-size: 32px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.offer-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.offer-content {
+    padding: 20px;
+}
+
+.offer-content h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.offer-content p {
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.offer-content button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.offer-content button:hover {
+    background-color: #800000;
+}
+
+/* Featured Destinations */
+.featured-destinations {
+    padding: 60px 0;
+}
+
+.featured-destinations h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+    font-size: 32px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.destination-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 15px;
+    background-color: var(--white);
+}
+
+.destination-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.destination-info p {
+    color: var(--primary-red);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.destination-info a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.destination-info a:hover {
+    color: var(--primary-red);
+}
+
+.destination-info a i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.view-all {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.view-all:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* Loyalty Program */
+.loyalty-program {
+    padding: 60px 0;
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.loyalty-program .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.loyalty-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.loyalty-content p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.loyalty-content ul {
+    margin-bottom: 30px;
+}
+
+.loyalty-content li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.loyalty-content i {
+    margin-right: 10px;
+    color: var(--primary-red);
+}
+
+.join-btn {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #800000;
+}
+
+.loyalty-image {
+    text-align: center;
+}
+
+.loyalty-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-red);
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-red);
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #800000;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-red);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: var(--primary-red);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .loyalty-program .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .loyalty-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .search-form {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .search-btn {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-btn {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .legal-links {
+        justify-content: center;
+    }
+}

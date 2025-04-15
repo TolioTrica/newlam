@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAM Airways - Companhia Aérea de Moçambique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="LAM.css">
+</head>
+
+<body>
+    <!-- Barra de navegação superior -->
+    <header class="top-bar">
+        <div class="container">
+            <div class="top-links">
+                <a href="#"><i class="fas fa-globe"></i> Português</a>
+                <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+                <a href="#"><i class="fas fa-phone"></i> Contactos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu principal -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/la.jpg" alt="LAM Airways" width="120">
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-plane"></i> Reservar Voo</a>
+                <a href="#"><i class="fas fa-suitcase"></i> Minhas Viagens</a>
+                <a href="#"><i class="fas fa-ticket-alt"></i> Check-in</a>
+                <a href="#"><i class="fas fa-map-marked-alt"></i> Estado do Voo</a>
+                <a href="#"><i class="fas fa-percent"></i> Ofertas</a>
+            </div>
+            <button class="mobile-menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Explore o mundo com a LAM Airways</h1>
+            <p>Voos diretos de Moçambique para os melhores destinos internacionais</p>
+        </div>
+    </section>
+
+    <!-- Buscador de voos -->
+    <section class="flight-search">
+        <div class="container">
+            <div class="search-tabs">
+                <button class="active">Ida e Volta</button>
+                <button>Só Ida</button>
+                <button>Vários Destinos</button>
+            </div>
+            
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="origin"><i class="fas fa-plane-departure"></i> Origem</label>
+                    <input type="text" id="origin" placeholder="Maputo, Moçambique (MPM)" list="airports">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination"><i class="fas fa-plane-arrival"></i> Destino</label>
+                    <input type="text" id="destination" placeholder="Escolha seu destino" list="airports">
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure"><i class="far fa-calendar-alt"></i> Partida</label>
+                    <input type="date" id="departure">
+                </div>
+                
+                <div class="form-group">
+                    <label for="return"><i class="far fa-calendar-alt"></i> Retorno</label>
+                    <input type="date" id="return">
+                </div>
+                
+                <div class="form-group">
+                    <label for="passengers"><i class="fas fa-users"></i> Passageiros</label>
+                    <select id="passengers">
+                        <option>1 Adulto</option>
+                        <option>2 Adultos</option>
+                        <option>Família (2+2)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="search-btn">Buscar Voos <i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        
+        <datalist id="airports">
+            <option value="Maputo, Moçambique (MPM)">
+            <option value="Beira, Moçambique (BEW)">
+            <option value="Nampula, Moçambique (APL)">
+            <option value="Johanesburgo, África do Sul (JNB)">
+            <option value="Lisboa, Portugal (LIS)">
+            <option value="Dubai, Emirados Árabes (DXB)">
+            <option value="Paris, França (CDG)">
+        </datalist>
+    </section>
+
+    <!-- Destaques e promoções -->
+    <section class="highlights">
+        <div class="container">
+            <h2>Ofertas Especiais</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <img src="imagens/dub.jpg" alt="Dubai">
+                    <div class="offer-content">
+                        <h3>Dubai a partir de 25.000MT</h3>
+                        <p>Válido até 30/11/2023</p>
+                        <button>Reservar Agora</button>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <img src="imagens/lisbon.jpg" alt="Lisboa">
+                    <div class="offer-content">
+                        <h3>Lisboa a partir de 30.000MT</h3>
+                        <p>Válido até 15/12/2023</p>
+                        <button>Reservar Agora</button>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <img src="imagens/johburg.jpg" alt="Johanesburgo">
+                    <div class="offer-content">
+                        <h3>Johanesburgo a partir de 5.000MT</h3>
+                        <p>Válido até 31/12/2023</p>
+                        <button>Reservar Agora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinos em destaque -->
+    <section class="featured-destinations">
+        <div class="container">
+            <h2>Destinos de Destaque</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="imagens/burj khalifa.jpg" alt="Dubai">
+                    <div class="destination-info">
+                        <h3>Dubai</h3>
+                        <p>A partir de 25.000MT</p>
+                        <a href="#">Ver voos <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="imagens/lisbon.jpg" alt="Lisboa">
+                    <div class="destination-info">
+                        <h3>Lisboa</h3>
+                        <p>A partir de 30.000MT</p>
+                        <a href="#">Ver voos <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="imagens/Paris.jpg" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris</h3>
+                        <p>A partir de 35.000MT</p>
+                        <a href="#">Ver voos <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="imagens/johburg.jpg" alt="Johanesburgo">
+                    <div class="destination-info">
+                        <h3>Johanesburgo</h3>
+                        <p>A partir de 5.000MT</p>
+                        <a href="#">Ver voos <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="center-btn">
+                <button class="view-all">Ver Todos os Destinos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programa de fidelidade -->
+    <section class="loyalty-program">
+        <div class="container">
+            <div class="loyalty-content">
+                <h2>Junte-se ao LAM Skywards</h2>
+                <p>Acumule milhas e desfrute de benefícios exclusivos em todos os seus voos</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Voos de prêmio</li>
+                    <li><i class="fas fa-check"></i> Upgrades de classe</li>
+                    <li><i class="fas fa-check"></i> Acesso a salas VIP</li>
+                    <li><i class="fas fa-check"></i> Prioridade no embarque</li>
+                </ul>
+                <button class="join-btn">Registar Agora</button>
+            </div>
+            <div class="loyalty-image">
+                <img src="skywards-card.png" alt="Cartão LAM Skywards">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sobre a LAM</h3>
+                    <ul>
+                        <li><a href="#">Nossa História</a></li>
+                        <li><a href="#">Frota</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Responsabilidade Social</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><a href="#">Bagagem</a></li>
+                        <li><a href="#">Viagens com Crianças</a></li>
+                        <li><a href="#">Passageiros com Necessidades Especiais</a></li>
+                        <li><a href="#">Documentação Necessária</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Serviço ao Cliente</h3>
+                    <ul>
+                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#">Reclamações</a></li>
+                        <li><a href="#">Perguntas Frequentes</a></li>
+                        <li><a href="#">Cancelamentos e Reembolsos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba nossas melhores ofertas por email</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit">Assinar</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 LAM - Linhas Aéreas de Moçambique. Todos os direitos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Termos e Condições</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="LAM.js"></script>
+</body>
+
+</html>
